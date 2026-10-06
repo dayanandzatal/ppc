@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign In · CrestX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/login.css" />
+</head>
+<body class="cx-login-body">
+  <div class="cx-login-card">
+    <div class="cx-login-header">
+      <div class="cx-login-brand">
+        <span class="cx-login-brand-mark" id="loginLogoMark"></span>
+        <span class="cx-login-brand-text">CRESTX</span>
+      </div>
+      <div class="cx-login-subtitle">CREST ERP Extension Suite</div>
+    </div>
+    <div class="cx-login-body-inner">
+      <div id="continueBanner"></div>
+      <div id="loginError"></div>
+      <form id="loginForm" autocomplete="on">
+        <div class="cx-field cx-login-field">
+          <label for="username">Username</label>
+          <input class="cx-input" type="text" id="username" name="username" autocomplete="username" placeholder="Enter username" required />
+        </div>
+        <div class="cx-field cx-login-field">
+          <label for="password">Password</label>
+          <div class="cx-input-suffix-wrap">
+            <input class="cx-input" type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter password" required />
+            <button type="button" class="cx-input-suffix-btn" id="togglePw" aria-label="Show password" tabindex="-1"></button>
+          </div>
+        </div>
+        <button type="submit" class="cx-btn cx-btn-primary cx-login-submit" id="submitBtn">Sign In</button>
+      </form>
+      <p class="cx-login-footer">Powered by CREST ERP</p>
+    </div>
+  </div>
+<script type="module" src="js/pages/login.js"></script>
+</body>
+</html>

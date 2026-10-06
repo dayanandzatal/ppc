@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="refresh" content="0; url=login.html" />
+<title>CrestX PPC</title>
+<script>
+  (function () {
+    var loggedIn = localStorage.getItem('crestx.isLoggedIn') === '1' && localStorage.getItem('crestx.token');
+    window.location.replace(loggedIn ? 'app.html' : 'login.html');
+  })();
+</script>
+</head>
+<body></body>
+</html>

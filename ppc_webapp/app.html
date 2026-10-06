@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CrestX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/tokens.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+<div class="cx-app" id="app">
+  <div class="cx-sidebar-scrim" id="sidebarScrim"></div>
+  <aside class="cx-sidebar">
+    <div class="cx-sidebar-brand">
+      <div class="cx-sidebar-brand-mark" id="sidebarLogoMark"></div>
+      <div class="cx-sidebar-brand-text">CRESTX</div>
+    </div>
+    <div class="cx-nav-section-label">Modules</div>
+    <nav class="cx-nav" id="sidebarNav"></nav>
+    <div class="cx-sidebar-foot" id="sidebarFoot">CrestX &middot; PPC v1.0</div>
+  </aside>
+
+  <div class="cx-main">
+    <header class="cx-topbar">
+      <div class="cx-topbar-left">
+        <button type="button" class="cx-icon-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <button type="button" class="cx-icon-btn" id="collapseBtn" aria-label="Collapse sidebar" style="display:none" data-desktop-only>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <span class="cx-topbar-org" id="topbarOrg"></span>
+      </div>
+      <div class="cx-topbar-right">
+        <span class="cx-topbar-user" id="topbarUser"></span>
+        <button type="button" class="cx-topbar-signout" id="logoutBtn">Sign Out</button>
+      </div>
+    </header>
+    <main class="cx-content" id="content"></main>
+    <div class="cx-activity-bar" id="activityBar"></div>
+  </div>
+</div>
+<script>
+  document.querySelectorAll('[data-desktop-only]').forEach(function (el) {
+    if (window.innerWidth > 900) el.style.display = 'flex';
+  });
+</script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
